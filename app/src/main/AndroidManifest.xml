@@ -1,0 +1,22 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.aware.plugin.balancedcampusesm">
+
+    <uses-permission android:name="android.permission.READ_CALENDAR" />
+    <uses-permission android:name="android.permission.WRITE_CALENDAR" />
+
+    <application android:allowBackup="true" android:label="@string/app_name"
+        android:theme="@style/Theme.Aware">
+
+        <service android:name="com.aware.plugin.balancedcampusesm.Plugin" android:exported="true" />
+        <activity android:name="com.aware.plugin.balancedcampusesm.Settings" android:exported="true" android:theme="@style/Theme.Aware" />
+        <provider android:name="com.aware.plugin.balancedcampusesm.Provider"
+            android:authorities="${applicationId}.provider.balancedcampusesm"
+            android:exported="true"
+            android:readPermission="com.aware.READ_CONTEXT_DATA"
+            android:writePermission="com.aware.WRITE_CONTEXT_DATA"/>
+
+    </application>
+
+
+
+</manifest>
